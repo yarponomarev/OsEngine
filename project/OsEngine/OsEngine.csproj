@@ -634,6 +634,7 @@
       <DependentUpon>ComparePositionsModuleUi.xaml</DependentUpon>
     </Compile>
     <Compile Include="Market\Servers\Deepcoin\DeepcoinServer.cs" />
+    <Compile Include="Market\Servers\Deepcoin\DeepcoinServerPermission.cs" />
     <Compile Include="Market\Servers\Deribit\DeribitServer.cs" />
     <Compile Include="Market\Servers\Deribit\DeribitServerPermission.cs" />
     <Compile Include="Market\Servers\Deribit\Entity\JsonRequest.cs" />
