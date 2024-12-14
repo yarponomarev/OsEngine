@@ -314,7 +314,8 @@ namespace OsEngine.Market
                 serverTypes.Add(ServerType.Woo);
                 serverTypes.Add(ServerType.BitGetSpot);
                 serverTypes.Add(ServerType.BitGetFutures);
-                serverTypes.Add(ServerType.Deepcoin);
+                // TODO: Узнать можно ли скачивать данные с коннектора
+                // serverTypes.Add(ServerType.Deepcoin);
 
                 return serverTypes;
             }
