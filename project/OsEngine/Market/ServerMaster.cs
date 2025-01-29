@@ -68,6 +68,7 @@ using OsEngine.Market.Servers.Mexc;
 using OsEngine.Market.Servers.KiteConnect;
 using OsEngine.Market.Servers.YahooFinance;
 using OsEngine.Market.Servers.Atp;
+using OsEngine.Market.Servers.Deepcoin;
 using OsEngine.Market.Servers.Polygon;
 
 
@@ -225,6 +226,8 @@ namespace OsEngine.Market
                 serverTypes.Add(ServerType.MoexFixFastTwimeFutures);
                 serverTypes.Add(ServerType.Mexc);
                 serverTypes.Add(ServerType.AstsBridge);
+                
+                serverTypes.Add(ServerType.Deepcoin);
 
 
                 // а теперь сортируем в зависимости от предпочтений пользователя
@@ -636,6 +639,10 @@ namespace OsEngine.Market
                 else if (type == ServerType.Polygon)
                 {
                     newServer = new PolygonServer();
+                }
+                else if (type == ServerType.Deepcoin)
+                {
+                    newServer = new DeepcoinServer();
                 }
 
                 if (newServer == null)
@@ -1269,6 +1276,10 @@ namespace OsEngine.Market
                 {
                     serverPermission = new PolygonServerPermission();
                 }
+                else if (type == ServerType.Deepcoin)
+                {
+                    serverPermission = new DeepcoinServerPermission();
+                }
 
                 if (serverPermission != null)
                 {
@@ -1742,5 +1753,10 @@ namespace OsEngine.Market
         /// Polygon.io
         /// </summary>
         Polygon,
+        
+        /// <summary>
+        /// Deepcoin
+        /// </summary>
+        Deepcoin,
     }
 }
